@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import { site } from "@/site.config";
+import { Reveal } from "@/components/Reveal";
 
 const creds = [
   "Internationally certified Fitness Trainer",
@@ -11,36 +12,32 @@ const creds = [
 
 export function Coach() {
   return (
-    <section id="coach" className="mx-auto max-w-6xl px-5 py-20 sm:py-28">
-      <div className="grid gap-12 lg:grid-cols-2">
-        <div>
-          <h2 className="text-4xl font-extrabold sm:text-5xl">Meet your coach, {site.business.founder}</h2>
-          <p className="mt-5 text-lg text-muted">
-            {site.business.founder} holds a B.Tech in Biotechnology and an M.Tech in Environmental Engineering, and spent five years in the
-            corporate world before going full-time in fitness. He knows first-hand how little time a working professional
-            really has, and builds every plan around it.
+    <section id="coach" className="mx-auto max-w-6xl px-5 py-24 sm:py-32">
+      <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+        <Reveal>
+          <h2 className="text-4xl font-extrabold sm:text-6xl">Meet your coach, {site.business.founder}</h2>
+          <p className="mt-6 max-w-xl text-lg text-muted sm:text-xl">
+            {site.business.founder} holds a B.Tech in Biotechnology and an M.Tech in Environmental Engineering, and
+            spent five years in the corporate world before going full-time in fitness. He knows first-hand how little
+            time a working professional really has, and builds every plan around it.
           </p>
-          <ul className="mt-6 space-y-2">
-            {creds.map((c) => (
-              <li key={c} className="flex items-center gap-3 font-medium">
-                <span className="grid size-6 place-items-center rounded-full bg-banana"><Check size={14} aria-hidden="true" /></span>
-                {c}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="rounded-3xl bg-jungle p-8 text-white on-dark">
-          <h3 className="text-2xl font-bold">A whole team behind your 12 weeks</h3>
-          <p className="mt-3 text-white/80">You are never left to figure it out alone. The Gympanzie team includes:</p>
-          <ul className="mt-5 space-y-3">
-            {site.team.map((t) => (
-              <li key={t} className="flex gap-3 border-b border-white/15 pb-3 last:border-0">
-                <span className="mt-2 size-2 shrink-0 rounded-full bg-banana" aria-hidden="true" />
-                {t}
-              </li>
-            ))}
-          </ul>
-        </div>
+        </Reveal>
+        <Reveal delay={150}>
+          <div className="grain relative overflow-hidden rounded-[2rem] bg-jungle p-8 text-white on-dark sm:p-10">
+            <div aria-hidden="true" className="orb orb-banana -right-20 -top-20 size-72 !opacity-25" />
+            <p className="relative font-display text-sm font-bold uppercase tracking-widest text-banana">Credentials</p>
+            <ul className="relative mt-6 space-y-4">
+              {creds.map((c) => (
+                <li key={c} className="flex items-center gap-4 text-lg font-medium">
+                  <span className="grid size-8 shrink-0 place-items-center rounded-full bg-banana text-ink">
+                    <Check size={16} aria-hidden="true" />
+                  </span>
+                  {c}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -24,7 +24,7 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-jungle text-white on-dark">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-[#08281d]/80 text-white backdrop-blur-xl on-dark">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
         <Link href="/" className="font-display text-2xl font-extrabold tracking-tight" aria-label="Gympanzie home">
           Gym<span className="text-banana">panzie</span>

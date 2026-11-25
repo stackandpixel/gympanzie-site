@@ -1,5 +1,6 @@
 import { homeJsonLd } from "@/lib/seo";
 import { Hero } from "@/components/sections/Hero";
+import { Marquee } from "@/components/sections/Marquee";
 import { Method } from "@/components/sections/Method";
 import { Results } from "@/components/sections/Results";
 import { Coach } from "@/components/sections/Coach";
@@ -15,6 +16,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
       <Hero />
+      <Marquee />
       <Method />
       <Results />
       <Coach />

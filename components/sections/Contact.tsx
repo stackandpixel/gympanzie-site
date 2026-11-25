@@ -6,10 +6,10 @@ import { EnquiryForm } from "@/components/EnquiryForm";
 
 export function Contact() {
   return (
-    <section id="contact" className="bg-jungle py-20 text-white on-dark sm:py-28">
+    <section id="contact" className="grain relative overflow-hidden bg-[#08281d] py-24 text-white on-dark sm:py-32">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-2">
         <div>
-          <h2 className="text-4xl font-extrabold sm:text-5xl">
+          <h2 className="text-4xl font-extrabold sm:text-6xl">
             Ready for your <span className="text-banana">12 weeks?</span>
           </h2>
           <p className="mt-5 text-lg text-white/85">
@@ -32,7 +32,7 @@ export function Contact() {
             href={instagramDm}
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-5 inline-flex min-h-11 items-center underline hover:text-banana"
+            className="block sm:ml-5 sm:inline-flex min-h-11 items-center underline hover:text-banana"
           >
             Message on Instagram
           </a>
