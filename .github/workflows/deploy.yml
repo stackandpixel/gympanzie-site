@@ -28,8 +28,9 @@ jobs:
       - run: npm run build
         env:
           NEXT_PUBLIC_FORM_ENDPOINT: ${{ secrets.NEXT_PUBLIC_FORM_ENDPOINT }}
-      - name: Add CNAME for custom domain
-        run: echo "gympanzie.com" > out/CNAME
+          # Preview on stackandpixel.github.io/gympanzie-site.
+          # When gympanzie.com goes live: delete this BASE_PATH line.
+          BASE_PATH: /gympanzie-site
       - run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
